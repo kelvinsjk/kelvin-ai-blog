@@ -6,7 +6,7 @@ import { getEntryBySlug } from "astro:content";
 
 const entry = await getEntryBySlug("about", "index");
 const { Content } = await entry.render();
-const { title, description, meta_title, image, what_i_do } = entry.data;
+const { title, description, meta_title, image, subtitle } = entry.data;
 ---
 
 <Base
@@ -17,6 +17,7 @@ const { title, description, meta_title, image, what_i_do } = entry.data;
 >
   <section class="section">
     <div class="container">
+      <!--
       <div class="row md:gx-4">
         <div class="sm:col-5 md:col-4">
           {image && (
@@ -28,21 +29,28 @@ const { title, description, meta_title, image, what_i_do } = entry.data;
                 alt={title}
                 class="rounded-lg w-full"
               />
-            </div>
-          )}
+              </div>
+              )}
         </div>
         <div class="sm:col-7 md:col-8">
-          <h1 set:html={markdownify(title)} class="h3 mb-8" />
-    
+        -->
+        <div>
+          <h1 set:html={markdownify(title)} class="h1 mb-8" />       
+          <h2 set:html={markdownify(subtitle)} class="h2 mb-8" />       
           <div class="content">
             <Content />
           </div>
+          <!--
           <a href="/contact" class="btn btn-primary text-white py-2">Get In Touch</a>
+          -->
         </div>
+        <!--
       </div>
+    -->
     </div>
   </section>
 
+  <!--
   <section class="section pt-0">
     <div class="container">
       <h3 class="page-heading mb-20">{what_i_do.title}</h3>
@@ -57,4 +65,5 @@ const { title, description, meta_title, image, what_i_do } = entry.data;
       </div>
     </div>
   </section>
+  -->
 </Base>

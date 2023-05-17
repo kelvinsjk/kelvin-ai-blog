@@ -33,7 +33,7 @@ const { title, description, authors, categories, image, date, tags } =
                 )
                 .map((author, i) => (
                   <a
-                    href={`/authors/${slugify(author.slug)}`}
+                    href={`/about`}
                     class="flex items-center hover:text-primary font-medium"
                   >
                     {author.data.image && (
@@ -80,10 +80,10 @@ const { title, description, authors, categories, image, date, tags } =
         {image && (
           <Image
             src={image}
-            height={500}
-            width={1000}
+            height={600}
+            width={ 600}
             alt={title}
-            class="rounded-lg"
+            class="rounded-lg mx-auto block"
           />
         )}
       </div>

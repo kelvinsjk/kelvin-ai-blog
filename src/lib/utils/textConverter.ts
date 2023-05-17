@@ -1,4 +1,4 @@
-import { slug } from 'github-slugger';
+import { slug } from "github-slugger";
 import { marked } from "marked";
 
 // slugify
@@ -13,6 +13,12 @@ export const markdownify = (content: string) => {
   if (!content) return null;
 
   return marked.parseInline(content);
+};
+// markdownify
+export const markdownify2 = (content: string) => {
+  if (!content) return null;
+
+  return marked.parse(content);
 };
 
 // humanize

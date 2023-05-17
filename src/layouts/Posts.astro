@@ -3,7 +3,7 @@ import { Image } from "@astrojs/image/components";
 import config from "@config/config.json";
 import { getSinglePage } from "@lib/contentParser.astro";
 import dateFormat from "@lib/utils/dateFormat";
-import { humanize,slugify } from "@lib/utils/textConverter";
+import { humanize,slugify,markdownify,markdownify2 } from "@lib/utils/textConverter";
 import { BiCalendarEdit,BiCategoryAlt } from "react-icons/bi/index.js";
 const authors = await getSinglePage("authors");
 const { summary_length } = config.settings;
@@ -17,11 +17,11 @@ const { className, posts, fluid } = Astro.props;
         {post.data.image && (
           <a href={`/${post.slug}`} class="rounded-lg block hover:text-primary overflow-hidden group">
             <Image
-              class="group-hover:scale-[1.03] transition duration-300 w-full"
+              class={i === 0 ? "group-hover:scale-[1.03] transition duration-300 block mx-auto": "group-hover:scale-[1.03] transition duration-300 w-full"}
               src={post.data.image}
               alt={post.data.title}
-              width={i === 0 ? 925 : 445}
-              height={i === 0 ? 475 : 230}
+              width={i === 0 ?  650 : 452}
+              height={i === 0 ? 650 : 452}
             />
           </a>
         )}
@@ -35,7 +35,7 @@ const { className, posts, fluid } = Astro.props;
               )
               .map((author) => (
                 <a
-                  href={`/authors/${slugify(author.data.title)}`}
+                  href={`/about`}
                   class="flex items-center hover:text-primary font-medium"
                 >
                   {author.data.image && (
@@ -78,9 +78,7 @@ const { className, posts, fluid } = Astro.props;
             {post.data.title}
           </a>
         </h3>
-        <p class="text-text">
-          {post.body?.slice(0, Number(i === 0 && fluid != false ? summary_length * 2 : summary_length))}...
-        </p>
+        <p class="text-text" set:html={markdownify(post.body?.slice(0, Number(i === 0 && fluid != false ? summary_length * 2 : summary_length)))} />
       </div>
     ))
   }

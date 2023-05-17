@@ -35,8 +35,8 @@ export default function SearchBar({ searchList }: Props) {
   const fuse = new Fuse(searchList, {
     keys: ["data.title", "data.categories", "data.tags"],
     includeMatches: true,
-    minMatchCharLength: 2,
-    threshold: 0.5,
+    minMatchCharLength: 3, // old value: 2,
+    threshold: 0.9,
   });
 
   useEffect(() => {
@@ -79,7 +79,14 @@ export default function SearchBar({ searchList }: Props) {
         ref={inputRef}
       />
 
-      {inputVal.length > 1 && (
+      {/*custom code to show error message*/}
+      {(!inputVal || inputVal.length <= 2) && (
+        <div className="my-6 text-center">
+          Please enter a search term with at least 3 characters
+        </div>
+      )}
+      {/*end of custom code*/}
+      {inputVal.length > 2 && ( // original length is 1
         <div className="my-6 text-center">
           Found {searchResults?.length}
           {searchResults?.length && searchResults?.length === 1
@@ -93,7 +100,10 @@ export default function SearchBar({ searchList }: Props) {
         {searchResults?.map(({ item }) => (
           <div key={item.slug} className={"col-12 mb-8 sm:col-6"}>
             {item.data.image && (
-              <a href={`/${item.slug}`} className="rounded-lg block hover:text-primary overflow-hidden group">
+              <a
+                href={`/${item.slug}`}
+                className="rounded-lg block hover:text-primary overflow-hidden group"
+              >
                 <img
                   className="group-hover:scale-[1.03] transition duration-300 w-full"
                   src={item.data.image}
@@ -119,7 +129,8 @@ export default function SearchBar({ searchList }: Props) {
                           href={`/categories/${slugify(category)}`}
                           className="mr-2 hover:text-primary font-medium"
                         >
-                          {humanize(category)}{i !== item.data.categories.length - 1 && ","}
+                          {humanize(category)}
+                          {i !== item.data.categories.length - 1 && ","}
                         </a>
                       </li>
                     ))}
@@ -129,7 +140,10 @@ export default function SearchBar({ searchList }: Props) {
             </ul>
 
             <h3 className="mb-2">
-              <a href={`/${item.slug}`} className="block hover:text-primary transition duration-300">
+              <a
+                href={`/${item.slug}`}
+                className="block hover:text-primary transition duration-300"
+              >
                 {item.data.title}
               </a>
             </h3>
