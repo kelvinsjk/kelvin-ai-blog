@@ -10,6 +10,9 @@ dependencies:
   '@astrojs/rss':
     specifier: ^2.1.0
     version: registry.npmjs.org/@astrojs/rss@2.4.1
+  '@types/react-dom':
+    specifier: ^18.2.4
+    version: registry.npmjs.org/@types/react-dom@18.2.4
   astro:
     specifier: ^2.0.11
     version: registry.npmjs.org/astro@2.4.5(sass@1.62.1)(sharp@0.31.3)
@@ -31,6 +34,9 @@ dependencies:
   react-icons:
     specifier: ^4.7.1
     version: registry.npmjs.org/react-icons@4.8.0(react@18.2.0)
+  rollup:
+    specifier: ^3.21.8
+    version: registry.npmjs.org/rollup@3.21.8
 
 devDependencies:
   '@astrojs/react':
@@ -1142,7 +1148,6 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz}
     name: '@types/prop-types'
     version: 15.7.5
-    dev: true
 
   registry.npmjs.org/@types/react-dom@18.2.4:
     resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/react-dom/-/react-dom-18.2.4.tgz}
@@ -1150,7 +1155,6 @@ packages:
     version: 18.2.4
     dependencies:
       '@types/react': registry.npmjs.org/@types/react@18.2.6
-    dev: true
 
   registry.npmjs.org/@types/react@18.2.6:
     resolution: {integrity: sha512-wRZClXn//zxCFW+ye/D2qY65UsYP1Fpex2YXorHc8awoNamkMZSvBxwxdYVInsHOZZd2Ppq8isnSzJL5Mpf8OA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/react/-/react-18.2.6.tgz}
@@ -1160,7 +1164,6 @@ packages:
       '@types/prop-types': registry.npmjs.org/@types/prop-types@15.7.5
       '@types/scheduler': registry.npmjs.org/@types/scheduler@0.16.3
       csstype: registry.npmjs.org/csstype@3.1.2
-    dev: true
 
   registry.npmjs.org/@types/resolve@1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/resolve/-/resolve-1.20.2.tgz}
@@ -1179,7 +1182,6 @@ packages:
     resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.3.tgz}
     name: '@types/scheduler'
     version: 0.16.3
-    dev: true
 
   registry.npmjs.org/@types/unist@2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/unist/-/unist-2.0.6.tgz}
@@ -1756,7 +1758,6 @@ packages:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/csstype/-/csstype-3.1.2.tgz}
     name: csstype
     version: 3.1.2
-    dev: true
 
   registry.npmjs.org/date-fns-tz@2.0.0(date-fns@2.30.0):
     resolution: {integrity: sha512-OAtcLdB9vxSXTWHdT8b398ARImVwQMyjfYGkKD2zaGpHseG2UPHbHjXELReErZFxWdSLph3c2zOaaTyHfOhERQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/date-fns-tz/-/date-fns-tz-2.0.0.tgz}
