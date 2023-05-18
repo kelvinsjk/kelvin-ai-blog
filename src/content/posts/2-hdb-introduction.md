@@ -1,7 +1,7 @@
 ---
 title: "My First Toy Project: HDB Resale Price Predictor"
 description: "Introduction to my first toy project where I try to use AI to predict HDB resale prices"
-date: 2023-05-16T12:00:00Z
+date: 2023-05-17T12:00:00Z
 image: "/images/posts/02.jpg"
 categories: ["project introduction", "hdb prices"]
 authors: ["Kelvin Soh"]
