@@ -66,7 +66,8 @@ answer immediately.
 But after this fine-tuning, going back to another round of "random descent" brought us to a final loss of ~17,500. Interestingly,
 this is lower than the root mean square error provided by the Google Sheets. I checked it manually with the weights provided
 by this model and that is indeed true, but at an improvement of ~0.8%, nothing too drastic that justifies any further
-investigation. It's the non-linear nature of machine learning that I think will be more interesting to explore!
+investigation. That said, we did take quite a lot of iterations and just that bit of manual fine tuning before getting to the results.
+And after all, it's the non-linear nature of machine learning that I think will be more interesting to explore!
 
 ## The cover image
 
