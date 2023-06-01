@@ -5,7 +5,7 @@ date: 2023-06-01T12:00:00Z
 image: "/images/posts/08.jpg"
 categories: ["learning", "hdb prices", "work in progress"]
 authors: ["Kelvin Soh"]
-tags: ["fastai", "map data"]
+tags: ["fastai", "map data", "tabular data"]
 draft: false
 ---
 
