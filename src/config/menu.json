@@ -9,6 +9,10 @@
       "url": "/about"
     },
     {
+      "name": "HDB Heatmap",
+      "url": "/hdb"
+    },
+    {
       "name": "Explore",
       "url": "",
       "hasChildren": true,
